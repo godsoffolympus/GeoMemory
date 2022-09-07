@@ -108,9 +108,11 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have the buttsdfsdfasdon this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            TextButton(
+
+              //style: Theme.of(context).textTheme.headline4,
+              onPressed: () {  },
+              child: Text('$_counter'),
             ),
           ],
         ),
@@ -119,6 +121,8 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
+
+
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
