@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
-
+// main() является главной функцией с которой начинается
+// выполнение приложения
+// возвращает виджет приложения
 void main() {
   runApp(const MyApp());
 }
-
+// В Flutter все является виджетом (кнопки,списки, текст и т.д.)
+// виджет - это отдельный компонент, который может быть отрисован
+// на экране (не путать с Android виджетами)
+// Наиболее простые виджеты наследуются от StatelessWidget класса
+// и не имеют состояния
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
+// функция build отвечает за построение иерархии виджетов
   @override
   Widget build(BuildContext context) {
+    // виджет MaterialApp - главный виджет приложения, который
+    // позволяет настроить тему и использовать
+    // Material Design для разработки.
     return MaterialApp(
-      title: 'Flutter Demo',
+      // заголовок приложения
+      // обычно виден, когда мы сворачиваем приложение
+      title: 'GeoMemory',
       theme: ThemeData(
-        // This is the theme of your application.
+        // настройка темы, мы ещё вернёмся к этому
         //
         // Try running your application with "flutter run". You'll see the
         // application has a blue toolbar. Then, without quitting the app, try
@@ -23,7 +33,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
-      ),
+      ),// указываем исходную страницу, которую мы создадим позже
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
